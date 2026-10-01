@@ -486,7 +486,7 @@ Not a site feature, but the design assumes it. Recorded here so the site is buil
 
 The footer credits the creator:
 
-**Built by Hellen Musyoka (@hellenstans)**
+**Built by Hellen Musyoka**
 
 The name and handle link to the relevant personal profile.
 
