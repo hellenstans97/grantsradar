@@ -40,16 +40,19 @@ function Deadline({ program, todayIso }: { program: ProgramRow; todayIso: string
   const daysLeft = daysBetween(todayIso, program.end_date);
   if (daysLeft < 0) {
     return (
-      <span className="deadline">
-        {program['Applications period']} · Deadline passed
+      <span className="deadline deadline--urgent">
+        {program['Applications period']} · closed
       </span>
     );
   }
 
   if (daysLeft <= 14) {
+    const countdown = daysLeft === 0
+      ? 'closes today'
+      : `${daysLeft} ${daysLeft === 1 ? 'day' : 'days'} left`;
     return (
       <span className="deadline deadline--urgent">
-        {program['Applications period']} · {daysLeft} {daysLeft === 1 ? 'day' : 'days'} left
+        {program['Applications period']} · {countdown}
       </span>
     );
   }
