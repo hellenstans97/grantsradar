@@ -319,7 +319,7 @@ Do not rename values:
 | Cloud credits | General cloud platform spend. |
 | Compute | Training and inference compute, GPU or CPU time. |
 | Subscription | A paid plan given free. |
-| Hardware Support | Physical hardware, or access to machines such as GPUs or quantum processors. |
+| Hardware | Physical hardware, or access to machines such as GPUs or quantum processors. |
 
 Example: `Grant, API credits, Compute`
 
@@ -433,7 +433,7 @@ V1 includes simple search across program and organisation names.
 - Cloud credits
 - Compute
 - Subscription
-- Hardware Support
+- Hardware
 
 ### Filter logic
 

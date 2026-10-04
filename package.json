@@ -1,0 +1,29 @@
+{
+  "name": "grantsradar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "NODE_USE_ENV_PROXY=1 next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "verify:data": "node --use-env-proxy --conditions=react-server --import tsx scripts/verify-data.ts",
+    "test": "node --conditions=react-server --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@next/env": "16.3.8",
+    "next": "16.3.8",
+    "papaparse": "5.7.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "@types/papaparse": "5.5.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
