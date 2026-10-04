@@ -184,7 +184,7 @@ Three stacked elements, nothing else:
 
 ```
 Who's backing people building with AI?
-Cash, credits and compute. What's open, and on what terms.
+Cash, credits and compute. See what's open and who can apply.
 ● 29 open programs · 7 closing this month · Since October 2026
 ```
 
@@ -237,6 +237,16 @@ name block       tag column   award column   action
 22px gap, `16px 24px` padding, `1px solid #EFEFEA` divider between rows, none
 after the last.
 
+A ledger header sits above the first row, inside the list border, using the same
+four-column grid and a divider beneath it:
+
+```
+PROGRAM          TYPE · WHAT YOU GET          AWARD · APPLICATIONS
+```
+
+It is JetBrains Mono, 11px, uppercase, `0.07em` letter-spacing, Quiet
+`#6E7075`. It is not sticky and scrolls with the page.
+
 **Name block:** program name, organisation beneath, then `FOR` plus eligibility.
 
 **Tag column:** the type tag first (outlined, no fill), then up to two What-you-get
@@ -251,7 +261,7 @@ them the tags trail variable-length eligibility text and the vertical rhythm bre
 
 ### Footer
 
-Left: **How this index is built · Submit a program · Last updated 28 September 2026**
+Left: **Submit a program · Last updated 28 September 2026**
 Right: **Built by Hellen Musyoka**
 
 `Last updated` is rendered from the Site Meta feed. The date shown above is
@@ -260,9 +270,6 @@ illustrative, not hard-coded.
 **Hellen Musyoka** links to `https://www.linkedin.com/in/hellen-musyoka-b5007a1b9/`,
 rendered in Ink so it reads as a name rather than a link. No social handle is
 displayed anywhere on the site.
-
-The methodology page lives here and nowhere else. It is a trust page, not a
-first-screen need.
 
 ### The History page
 
@@ -361,8 +368,9 @@ grey. Rolling programs read `Rolling`.
 substituted for it. The date carries trust; the countdown carries urgency.
 
 Countdown days are computed from `end_date`. If `end_date` has passed and `status`
-is still `live`, show the exact date and a quiet **Deadline passed** marker — never
-a negative countdown, and never move the row automatically.
+is still `live`, show the original Applications period plus **Deadline passed** in
+Quiet `#6E7075`, with no amber treatment. Never show a negative countdown or use
+History's `closed` vocabulary, and never move the row automatically.
 
 ### Not Published is a finding
 

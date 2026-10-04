@@ -35,7 +35,7 @@ function LiveDeadline({ program, todayIso }: { program: ProgramRow; todayIso: st
   if (!program.end_date) return <span className="deadline">{program['Applications period']}</span>;
   const daysLeft = daysBetween(todayIso, program.end_date);
   if (daysLeft < 0) {
-    return <span className="deadline deadline--urgent">{program['Applications period']} · closed</span>;
+    return <span className="deadline deadline--passed">{program['Applications period']} · Deadline passed</span>;
   }
   if (daysLeft <= 14) {
     const countdown = daysLeft === 0 ? 'closes today' : `${daysLeft} ${daysLeft === 1 ? 'day' : 'days'} left`;
@@ -120,7 +120,7 @@ function ProgramsIndex({ programs, lastUpdated, todayIso, mode }: Props & { mode
       <main className="page-width main-content">
         <section className="hero">
           <h1>{isHistory ? 'History' : "Who's backing people building with AI?"}</h1>
-          <p className="subline">{isHistory ? 'Programs that have closed.' : "Cash, credits and compute. What's open, and on what terms."}</p>
+          <p className="subline">{isHistory ? 'Programs that have closed.' : "Cash, credits and compute. See what's open and who can apply."}</p>
           <p className="stats-line">
             <span className={isHistory ? 'history-dot' : 'live-dot'} aria-hidden="true" />
             {isHistory ? `${programs.length} closed programs` : `${programs.length} open programs · ${closingThisMonth} closing this month · Since October 2026`}
@@ -148,6 +148,12 @@ function ProgramsIndex({ programs, lastUpdated, todayIso, mode }: Props & { mode
         </section>
         {filteredPrograms.length ? (
           <section className="program-list" aria-label={isHistory ? 'Closed programs' : 'Live programs'}>
+            <div className="program-list-header" aria-hidden="true">
+              <span>PROGRAM</span>
+              <span>TYPE · WHAT YOU GET</span>
+              <span>AWARD · APPLICATIONS</span>
+              <span />
+            </div>
             {filteredPrograms.map((program) => <ProgramRowView key={program.slug} program={program} selectedTags={selectedTags} todayIso={todayIso} mode={mode} />)}
           </section>
         ) : programs.length === 0 && isHistory ? (

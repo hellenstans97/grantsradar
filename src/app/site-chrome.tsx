@@ -32,7 +32,6 @@ export function SiteFooter({ lastUpdated }: { lastUpdated: string }) {
     <footer className="site-footer">
       <div className="page-width footer-inner">
         <div className="footer-left">
-          <Link href="/methodology">How this index is built</Link><span aria-hidden="true">·</span>
           <a href={SUBMIT_URL} target="_blank" rel="noreferrer">Submit a program</a><span aria-hidden="true">·</span>
           <span className="last-updated">Last updated {formatSiteDate(lastUpdated)}</span>
         </div>
