@@ -71,7 +71,7 @@ function ProgramRowView({ program, selectedTags, todayIso, mode }: {
       </div>
       <div className="award-column">
         <strong className={`${program['Award size'] === 'Not Published' ? 'award award--unknown' : 'award'}${isHistory ? ' award--closed' : ''}`}>
-          {program['Award size']}
+          {program['Award size'] === 'Not Published' ? 'Award not published' : program['Award size']}
         </strong>
         {isHistory
           ? <span className="deadline deadline--closed">{formatClosedDate(program.end_date)}</span>
@@ -123,7 +123,12 @@ function ProgramsIndex({ programs, lastUpdated, todayIso, mode }: Props & { mode
           <p className="subline">{isHistory ? 'Programs that have closed.' : "Cash, credits and compute. See what's open and who can apply."}</p>
           <p className="stats-line">
             <span className={isHistory ? 'history-dot' : 'live-dot'} aria-hidden="true" />
-            {isHistory ? `${programs.length} closed programs` : `${programs.length} open programs · ${closingThisMonth} closing this month · Since October 2026`}
+            {isHistory ? `${programs.length} closed programs` : (
+              <>
+                {programs.length} open programs · {closingThisMonth} closing this month
+                <span className="launch-stat"> · Since October 2026</span>
+              </>
+            )}
           </p>
         </section>
         <section className="discovery" aria-label="Find programs">

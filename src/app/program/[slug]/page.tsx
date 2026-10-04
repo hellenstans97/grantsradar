@@ -55,7 +55,7 @@ export default async function ProgramPage({ params }: PageProps) {
             <p>{program.Organisation}</p>
           </div>
           <a
-            className={isClosed ? 'program-action program-action--closed' : 'program-action'}
+            className={isClosed ? 'program-action program-action--closed program-action--desktop' : 'program-action program-action--desktop'}
             href={program.Apply}
             target="_blank"
             rel="noreferrer"
@@ -71,6 +71,15 @@ export default async function ProgramPage({ params }: PageProps) {
           ))}
           <span className={`status-chip ${isClosed ? 'status-chip--closed' : 'status-chip--live'}`}>{statusLabel}</span>
         </div>
+
+        <a
+          className={isClosed ? 'program-action program-action--closed program-action--mobile' : 'program-action program-action--mobile'}
+          href={program.Apply}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {isClosed ? 'Official page →' : 'Apply →'}
+        </a>
 
         <dl className="facts-table">
           {facts.map((fact) => (
