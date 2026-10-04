@@ -438,9 +438,8 @@ select is single-choice.
 *"Try removing one, or clear them."* beneath. Never a blank page.
 
 **Empty History:** before anything closes, History shows exactly
-**`Programs will appear here when they close.`** Not "when their deadline
-passes" — rolling programs have no deadline. An empty page under a nav tab reads
-as broken.
+**`Closed programs will be listed here.`** An empty page under a nav tab reads as
+broken.
 
 ---
 

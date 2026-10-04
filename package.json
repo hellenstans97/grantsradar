@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_USE_ENV_PROXY=1 next dev",
     "build": "NODE_USE_ENV_PROXY=1 next build",
-    "start": "next start",
+    "start": "NODE_USE_ENV_PROXY=1 next start",
     "typecheck": "tsc --noEmit",
     "verify:data": "node --use-env-proxy --conditions=react-server --import tsx scripts/verify-data.ts",
     "test": "node --conditions=react-server --import tsx --test tests/*.test.ts"
