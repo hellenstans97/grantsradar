@@ -378,6 +378,12 @@ History's `closed` vocabulary, and never move the row automatically.
 does not compete, but at full contrast because it is information, not an empty
 field. It must never look disabled.
 
+In Live and History rows only, an Award size value of `Not Published` displays as
+**`Award not published`** so the unlabelled stacked value is unambiguous. It keeps
+the same 13px, weight 400, Body-grey treatment with no letter-spacing. Program
+page facts tables keep the CSV value `Not Published` because `Award size` already
+labels that row. `Rolling` is never changed.
+
 ### Closed means closed
 
 On History: a grey chip sits exactly where the amber deadline sits on Live. Same
@@ -458,15 +464,15 @@ Not a redesign. The same product at 390px.
 - Wordmark left, menu button right (44px touch target)
 - H1 at 26px, same words
 - Search full width, type select full width beneath it
-- The five chips scroll horizontally. **The scrollbar is hidden** (`scrollbar-width: none`
-  plus `::-webkit-scrollbar { display: none }`) — swipe still works, but a visible
-  bar reads as a design element
+- The five chips scroll horizontally. **The scrollbar is hidden** (`scrollbar-width: none`,
+  `-ms-overflow-style: none`, plus `::-webkit-scrollbar { display: none }`) — swipe
+  still works, but a visible bar reads as a design element
 - Stats line drops "Since October 2026" to fit
 - Rows become stacked cards in the same bordered container
 
-**The one layout change from desktop:** award figure and `Apply →` share a line,
-with tags and the deadline beneath. Desktop reads left-to-right across columns;
-a phone reads top-to-bottom, so the two things a builder decides with sit together.
+The desktop grid collapses rather than shrinking. Each row stacks the program
+name, organisation, `FOR` line, tags, award and applications period, then the
+full-width action at the bottom. The desktop ledger header is hidden.
 
 Whole card is tappable. All touch targets at least 44px.
 
