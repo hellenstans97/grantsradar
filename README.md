@@ -2,8 +2,8 @@
 
 Next.js App Router / TypeScript implementation of GrantsRadar. Product and visual
 contracts are in SPEC.md and DESIGN.md. The current UI scope is the desktop Live
-index at `/`; History, program detail pages, methodology, and mobile layouts are
-reserved for later work.
+index at `/`, History at `/history`, and request-time program detail pages at
+`/program/[slug]`; methodology and mobile layouts are reserved for later work.
 
 ## Setup and verification
 
