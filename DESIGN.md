@@ -264,6 +264,13 @@ them the tags trail variable-length eligibility text and the vertical rhythm bre
 
 ### Footer
 
+Directly below the Live and History program list and above the footer, show one
+unboxed line: `Every row is checked against the funder's own page.` as plain text
+on the left and `Read the methodology →` linked to `/methodology` on the right.
+Both use 13px Quiet `#6E7075`, with no background, border or divider. The link
+underlines on hover. On mobile, the items stack with the plain text first.
+There is no methodology link in the footer.
+
 Left: **Submit a program · Last updated 28 September 2026**
 Right: **Built by Hellen Musyoka**
 
@@ -327,8 +334,9 @@ and application steps are on the official page.
 - Award size is the largest value in the table at 20px
 - Apply is a **solid green button** here, not a text link — it is the single
   action on the page
-- The closing sentence stays. It explains the product philosophy without
-  sending anyone to the methodology page
+- The closing sentence stays unchanged. Within it, `records what the funder
+  publishes` links to `/methodology`: `GrantsRadar records what the funder
+  publishes. Full tier conditions and application steps are on the official page.`
 
 **For a closed program**, three things change:
 

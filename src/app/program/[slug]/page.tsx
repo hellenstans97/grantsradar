@@ -96,7 +96,7 @@ export default async function ProgramPage({ params }: PageProps) {
           </div>
         </dl>
 
-        <p className="program-note">GrantsRadar records what the funder publishes. Full tier conditions and application steps are on the official page.</p>
+        <p className="program-note">GrantsRadar <Link href="/methodology">records what the funder publishes</Link>. Full tier conditions and application steps are on the official page.</p>
       </main>
       <SiteFooter lastUpdated={siteMeta.last_updated} />
     </div>

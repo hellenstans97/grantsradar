@@ -137,6 +137,13 @@ a { color: inherit; text-decoration: none; }
 .fact-source a { color: var(--green); }
 .fact-source a:hover { color: var(--green-hover); }
 .program-note { max-width: 680px; margin: 24px 0 0; color: var(--body); font-size: 14px; line-height: 1.55; }
+.program-note a, .methodology-page a { color: var(--green); }
+.program-note a:hover, .methodology-page a:hover { color: var(--green-hover); }
+.methodology-line { margin-top: 24px; display: flex; justify-content: space-between; gap: 24px; color: var(--quiet); font-size: 13px; }
+.methodology-line a:hover { text-decoration: underline; }
+.methodology-page h1 { margin: 0; color: var(--ink); font-size: 38px; line-height: 1.16; font-weight: 600; letter-spacing: -0.03em; }
+.methodology-page h2 { margin: 32px 0 16px; color: var(--ink); font-family: var(--sans); font-weight: 700; }
+.methodology-page p { margin: 16px 0; color: var(--body); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
 
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); }
 .footer-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px; font-size: 14px; }
@@ -185,6 +192,8 @@ a { color: inherit; text-decoration: none; }
   .breadcrumb { min-height: 44px; display: inline-flex; align-items: center; }
   .program-heading { margin-top: 22px; display: block; }
   .program-heading h1 { font-size: 26px; }
+  .methodology-page h1 { font-size: 26px; }
+  .methodology-line { flex-direction: column; gap: 8px; }
   .program-heading p { font-size: 14px; }
   .program-action--desktop { display: none; }
   .program-tags { margin-top: 18px; }
