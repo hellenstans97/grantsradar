@@ -229,13 +229,16 @@ in the default state — the stats line above already gives the total.
 A four-column grid inside a single bordered container:
 
 ```
-minmax(0, 1fr)   270px        170px          70px
+minmax(0, 1fr)   270px        170px          120px
 name block       tag column   award column   action
                               (right)        (right)
 ```
 
 22px gap, `16px 24px` padding, `1px solid #EFEFEA` divider between rows, none
 after the last.
+
+Live and History share this grid. The 120px action column keeps `Official page →`
+on one line with clear space from the 170px award column.
 
 A ledger header sits above the first row, inside the list border, using the same
 four-column grid and a divider beneath it:
@@ -461,7 +464,9 @@ broken.
 
 Not a redesign. The same product at 390px.
 
-- Wordmark left, menu button right (44px touch target)
+- Wordmark left, all three navigation links inline right: **Live · History · Submit**.
+  At 1039px and below, the third label is `Submit`; desktop keeps
+  `Submit a program`. Both open the same Google Form in a new tab.
 - H1 at 26px, same words
 - Search full width, type select full width beneath it
 - The five chips scroll horizontally. **The scrollbar is hidden** (`scrollbar-width: none`,
@@ -476,11 +481,7 @@ full-width action at the bottom. The desktop ledger header is hidden.
 
 Whole card is tappable. All touch targets at least 44px.
 
-### The menu
-
-The header button opens a plain dropdown panel below the header containing
-**Live · History · Submit a program**. No full-screen takeover, no slide-in
-drawer, no animation beyond showing and hiding.
+There is no hamburger button or dropdown menu. Navigation stays visible inline.
 
 ### History on a phone
 
