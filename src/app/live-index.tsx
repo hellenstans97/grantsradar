@@ -166,6 +166,10 @@ function ProgramsIndex({ programs, lastUpdated, todayIso, mode }: Props & { mode
         ) : (
           <section className="empty-results"><p>Nothing matches those filters</p><span>Try removing one, or clear them.</span></section>
         )}
+        <div className="methodology-line">
+          <span>Every row is checked against the funder&apos;s own page.</span>
+          <Link href="/methodology">Read the methodology →</Link>
+        </div>
       </main>
       <SiteFooter lastUpdated={lastUpdated} />
     </div>
