@@ -123,9 +123,9 @@ function ProgramsIndex({ programs, lastUpdated, todayIso, mode }: Props & { mode
           <p className="subline">{isHistory ? 'Programs that have closed.' : "Cash, credits and compute. See what's open and who can apply."}</p>
           <p className="stats-line">
             <span className={isHistory ? 'history-dot' : 'live-dot'} aria-hidden="true" />
-            {isHistory ? `${programs.length} closed programs` : (
+            {isHistory ? `${programs.length} closed ${programs.length === 1 ? 'program' : 'programs'}` : (
               <>
-                {programs.length} open programs · {closingThisMonth} closing this month
+                {programs.length} open {programs.length === 1 ? 'program' : 'programs'} · {closingThisMonth} closing this month
                 <span className="launch-stat"> · Since October 2026</span>
               </>
             )}
